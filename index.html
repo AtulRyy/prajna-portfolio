@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prajna Patil</title>
+
+    <link rel="stylesheet" href="./public/css/custom-styles.css" />
+    <!-- <link rel="stylesheet" href="./public/css/output.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#070831]">
+    <div class="home-page-wrapper flex justify-center">
+      <div class="home-page w-[80%] h-screen flex items-center justify-between">
+        <div class="home-page-text text-white flex">
+          <h2 class="birthstone text-5xl mr-5 home-text">p</h2>
+          <div class="text-3xl text-gray-500 leading-[3rem]">
+            <h2 class="home-text">
+              Hey, I'm <span class="text-white">Prajna</span>
+            </h2>
+            <h2 class="home-text">
+              I'm a <span class="text-white">designer</span> working on cities
+              and <br />mobility.
+            </h2>
+            <p class="text-xl home-text">
+              Currently a product designer at
+              <span class="text-white">Uber</span>
+            </p>
+          </div>
+        </div>
+        <div class="home-page-designs h-full flex justify-center items-center">
+          <!-- <div
+            class="big-circle h-[300px] w-[300px] rounded-full border-white border-2 relative"
+          >
+            <div
+              class="small-circle h-[80px] w-[80px] bg-[#070831] border-2 border-white rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            ></div>
+          </div> -->
+
+          <svg
+            class="big-circle w-[500px] h-[500px] overflow-visible"
+            viewBox="0 0 100 100"
+          >
+            <circle cx="50" cy="50" r="42" fill="none" />
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              fill="none"
+              fill="transparent"
+              stroke="grey"
+              stroke-width="0.5"
+            />
+            <circle
+              class="small-circle"
+              r="12"
+              fill="#070831"
+              stroke="grey"
+              stroke-width="0.5"
+            >
+              <animateMotion dur="13s" repeatCount="indefinite">
+                <mpath xlink:href="#motionPath" />
+              </animateMotion></circle>
+              <circle
+                class="small-circle"
+                r="8"
+                fill="#070831"
+                stroke="grey"
+                stroke-width="0.5"
+              >
+                <animateMotion dur="10s" repeatCount="indefinite">
+                  <mpath xlink:href="#motionPath" />
+                </animateMotion>
+              </circle>
+            
+            <path
+              id="motionPath"
+              d="M 90,50
+                   a 40,40 0 1,0 -80,0
+                   a 40,40 0 1,0 80,0"
+              fill="none"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
+
+    <script>
+      gsap.from(".home-text", {
+        duration: 3, // Animation duration
+        y: "100%", // Move from below the viewport
+        opacity: 0, // Initially hidden
+        stagger: 0.5, // Staggered animation delay
+        ease: "power4.out",
+      });
+    </script>
+  </body>
+</html>
